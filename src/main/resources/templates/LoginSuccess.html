@@ -1,0 +1,124 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile Login Form Flat Responsive widget Template :: cssmoban</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Unique Login Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- font files  -->
+    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <!-- /font files  -->
+    <!-- css files -->
+    <link href="../static/layui/css/animate-custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/layui/css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
+
+    <link rel="stylesheet" href="../static/layui/css/layui.css"  media="all">
+    <link rel='stylesheet' href="../static/layui/css/style.css"  media="all">
+    <script src="../static/layui/layui.js" charset="utf-8"></script>
+    <script src="../static/layui/jquery/jquery.js"></script>
+
+    <script type="text/javascript">
+        layui.use(['element','layer','laypage','layedit'], function(){
+            var element = layui.element;
+            var laypage = layui.laypage;
+            $ = layui.jquery;
+            layer = layui.layer;
+            resetMenuHeight();
+        });
+        // 重新设置菜单容器高度
+        function resetMenuHeight(){
+            var height = document.documentElement.clientHeight - 50;
+            $('#menu').height(height);
+        }
+    </script>
+</head>
+<body>
+<div class="adcenter"><script src="http://www.cssmoban.com/include/new/ggad2_728x90.js"></script></div>
+<div class="header">
+    <h1>Profile Login Form</h1>
+</div>
+<div class="content">
+    <section>
+        <div id="container_demo" >
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <div class="content-img">
+                        <img src="../static/layui/images/profile.png" alt="img" class="w3l-img">
+                    </div>
+                    <form  action="#" autocomplete="on" method="post" th:object="${LoginMessage}">
+                        <h2>Login</h2>
+                        <p>
+                            <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                            <input id="userName" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                            <input id="password" name="password" required="required" type="password" placeholder="eg:password123!@#$%" />
+                        </p>
+                        <input id="csrfToken" type="hidden" th:value="${LoginMessage.getCsrfToken()}" name="csrfToken">
+                        <p class="keeplogin">
+                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                            <label for="loginkeeping">Keep me logged in</label>
+                        </p>
+                        <p class="login button">
+                            <input type="button" onclick="doPost()" value="Login" />
+                        </p>
+                        <p class="change_link">
+                            Not a member yet ?
+                            <a href="#toregister" class="to_register">Join us</a>
+                        </p>
+                    </form>
+                </div>
+                <div id="register" class="animate form">
+                    <div class="content-img">
+                        <img src="../static/layui/images/profile.png" alt="img" class="w3l-img">
+                    </div>
+                    <form  action="#" autocomplete="on" method="post">
+                        <h2> Sign up </h2>
+                        <p>
+                            <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                        </p>
+                        <p>
+                            <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                            <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                        </p>
+                        <p>
+                            <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                            <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg:password123!@#$%"/>
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                            <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg:password123!@#$%"/>
+                        </p>
+                        <p class="signin button">
+                            <input type="button" onclick="doRegisterPost()" value="Sign up"/>
+                        </p>
+                        <p class="change_link">
+                            Already a member ?
+                            <a href="#tologin" class="to_register">Log in</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../static/layui/MyJs/index.js"></script>
+<div class="footer">
+    <p>© 2020 Profile Login Form. All Rights Reserved | Design by  <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+</div>
+<style>
+    .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+</style>
+<div class="copyrights" id="links20210126">
+    Collect from <a href="http://www.cssmoban.com/"  title="网站模板">模板之家</a>
+    <a href="http://cooco.net.cn/" title="组卷网">组卷网</a>
+</div>
+</body>
+</html>

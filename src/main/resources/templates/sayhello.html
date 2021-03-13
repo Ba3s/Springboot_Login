@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>脚本之家: Spring表单提交处理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>表单处理演示</h1>
+<form action="#" th:action="@{/sayhello}" th:object="${helloMessage}" method="post">
+    <p>friend: <input type="text"  th:field="*{name}" /></p>
+    <p>message: <input type="text" th:field="*{message}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
